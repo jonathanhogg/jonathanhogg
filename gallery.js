@@ -21,8 +21,11 @@ Slideshow.prototype.start = function()
 
 Slideshow.prototype.stop = function()
 {
-    this.image.onload = null;
-    this.image = null;
+    if (this.image != null)
+    {
+        this.image.onload = null;
+        this.image = null;
+    }
 }
 
 Slideshow.prototype.preload = function()

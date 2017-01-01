@@ -122,7 +122,7 @@ function finish_section()
     var section = hash && hash != "#" ? $("section" + hash) : [];
     if (section.length == 1)
     {
-        $("nav>a[href=" + hash + "]").addClass('targeter');
+        $("nav>a[href='" + hash + "']").addClass('targeter');
         $("body").addClass('activated');
         section.addClass('targeted');
         if (display)
