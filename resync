@@ -1,0 +1,14 @@
+#!/bin/sh
+
+make -C fireworks
+
+HASH=`egrep -v '^(#|CACHE|NETWORK|\*|http:|\.$|$)' jonathanhogg.appcache | while read file; do md5 $file; done | md5`
+sed "s/\\\$Hash:.*\\\$/\\\$Hash: $HASH\\\$/" < jonathanhogg.appcache > jonathanhogg.appcache.new
+diff jonathanhogg.appcache jonathanhogg.appcache.new >/dev/null \
+  && rm jonathanhogg.appcache.new || mv jonathanhogg.appcache.new jonathanhogg.appcache
+
+rsync --archive --verbose --delete-excluded \
+        --exclude resync --exclude .git --exclude '*.pxm' --exclude '*.swp' --exclude '.DS_Store' \
+        --exclude Makefile --exclude src \
+        ./ ${1:-cauliflower.significant-whitespace.com:/var/www/www.jonathanhogg.com/htdocs/}
+
