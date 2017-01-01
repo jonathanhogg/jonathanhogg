@@ -1,17 +1,18 @@
 CACHE MANIFEST
-# $Hash: b09b5b0c46068a726dd479c414e5d8b0$
+# $Hash: d5daed27e2f9ca313639a96cec717c52$
 .
 index.html
 jonathanhogg.css
 jonathanhogg.js
 gallery.js
-jquery-2.0.3.min.js
+jquery-3.1.1.min.js
 modernizr.min.js
 images/icon.png
 images/twitter.png
 images/facebook.png
 images/linkedin.png
 images/email.png
+images/github.png
 images/outputarts.png
 fireworks/fireworks.min.js
 fireworks/images/blue.png
