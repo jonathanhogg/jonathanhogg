@@ -1,0 +1,215 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Helvetica Neue",helvetica,arial,sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+a { color: inherit; }
+
+a.ribbon {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    background-color: #555;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    line-height: 40px;
+    border: 1px solid;
+    transform-origin: 200px 0;
+    transform: rotate(45deg) translate(100px,55px);
+}
+
+@media (hover: hover) {
+    .fade-until-hover {
+        opacity: 0.5;
+        transition: opacity 100ms 0ms linear;
+    }
+    .fade-until-hover:hover { opacity: 1; }
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2em;
+    margin: 0.5em 0 0 0;
+}
+
+.subtitle {
+    font-size: 1em;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2em;
+    margin: 1em 0 0.5em 0;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 0 10% 5% 10%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 500px) and (min-height: 500px) {
+    section {
+        padding: 0 20% 10% 20%;
+    }
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#profile {
+    background-color: rgba(64,32,64,0.9);
+}
+
+#profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: 100%;
+    border: solid 5px white;
+}
+
+#profile>.background {
+    background-image: url(images/profile-background.jpg);
+}
+
+#i-feel {
+    background-color: #111;
+}
+
+#i-feel-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#i-feel-info {
+    position: absolute;
+    margin: 40px;
+    left: 0;
+    bottom: 0;
+    font-size: 16px;
+    text-shadow: 0 0 0.25em black;
+    text-align: left;
+}
+
+#i-feel-credit { font-size: 14px; }
+
+#about {
+    background-color: rgba(32,64,32,0.9);
+}
+
+#about>.background {
+    background-image: url(images/about-background.jpg);
+}
+
+#outputarts {
+    background-color: rgba(32,32,32,0.9);
+}
+
+#outputarts>.background {
+    background-image: url(images/outputarts-background.jpg);
+}
+
+#outputartslogo {
+    color: transparent;
+    background-image: url(images/outputarts.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#connect {
+    background-color: rgba(32,32,64,0.9);
+}
+
+#connect>.background {
+    background-image: url(images/connect-background.jpg);
+}
+
+#scroll-up, #scroll-down {
+    position: fixed;
+    left: 45%;
+    width: 10%;
+    height: 10px;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-up {
+    top: 10px;
+}
+
+#scroll-down {
+    bottom: 10px;
+}
+
+#email,
+#twitter,
+#facebook,
+#linkedin,
+#github {
+    padding: 0 0 10px 30px;
+}
+
+#email { background: url(images/email.png) top left no-repeat; }
+#twitter { background: url(images/twitter.png) top left no-repeat; }
+#facebook { background: url(images/facebook.png) top left no-repeat; }
+#linkedin { background: url(images/linkedin.png) top left no-repeat; }
+#github { background: url(images/github.png) top left no-repeat; }
+
