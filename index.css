@@ -12,6 +12,7 @@ html {
 body {
     margin: 0;
     color: white;
+    background-color: black;
     font-family: "Helvetica Neue",helvetica,arial,sans-serif;
     font-weight: 300;
     font-size: 14px;
@@ -164,7 +165,7 @@ section {
     background-image: url(images/outputarts-background.jpg);
 }
 
-#outputartslogo {
+#outputarts>h2 {
     color: transparent;
     background-image: url(images/outputarts.png);
     background-position: center;
@@ -202,6 +203,7 @@ section {
 #email,
 #twitter,
 #facebook,
+#instagram,
 #linkedin,
 #github {
     padding: 0 0 10px 30px;
@@ -210,6 +212,7 @@ section {
 #email { background: url(images/email.png) top left no-repeat; }
 #twitter { background: url(images/twitter.png) top left no-repeat; }
 #facebook { background: url(images/facebook.png) top left no-repeat; }
+#instagram { background: url(images/instagram.png) top left no-repeat; }
 #linkedin { background: url(images/linkedin.png) top left no-repeat; }
 #github { background: url(images/github.png) top left no-repeat; }
 
