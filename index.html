@@ -58,7 +58,7 @@
                     loop(dropped_last_frame=false)
                     {
                         var rect = this.container.getBoundingClientRect();
-                        if (rect.top > window.innerHeight)
+                        if (rect.top >= window.innerHeight)
                             setTimeout(() => this.loop(), 100);
                         else
                             super.loop(dropped_last_frame);
