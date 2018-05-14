@@ -15,7 +15,7 @@ var ignoreScroll = false,
 function update()
 {
     var pageHeight = window.innerHeight,
-        scrollTop = document.body.scrollTop,
+        scrollTop = window.pageYOffset,
         offset = scrollTop % pageHeight;
     document.body.style.height = pageHeight.toString() + "px";
     if (offset > pageHeight/2)
@@ -61,16 +61,16 @@ window.addEventListener('resize', update);
 
 ScrollUp.onclick = function() {
     scrollStartTime = performance.now();
-    scrollStartPosition = document.body.scrollTop;
-    scrollDestination = Math.trunc(document.body.scrollTop/document.body.clientHeight - 1)*document.body.clientHeight;
+    scrollStartPosition = window.pageYOffset;
+    scrollDestination = Math.trunc(scrollStartPosition/window.innerHeight - 1)*window.innerHeight;
     forceScroll = true;
     scroller();
 };
 
 ScrollDown.onclick = function() {
     scrollStartTime = performance.now();
-    scrollStartPosition = document.body.scrollTop;
-    scrollDestination = Math.trunc(document.body.scrollTop/document.body.clientHeight + 1)*document.body.clientHeight;
+    scrollStartPosition = window.pageYOffset;
+    scrollDestination = Math.trunc(scrollStartPosition/window.innerHeight + 1)*window.innerHeight;
     forceScroll = true;
     scroller();
 };
