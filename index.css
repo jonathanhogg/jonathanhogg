@@ -22,18 +22,6 @@ body {
     overflow-y: auto;
 }
 
-@media (min-width: 600px) and (min-height: 600px) {
-    body {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1000px) and (min-height: 800px) {
-    body {
-        font-size: 18px;
-    }
-}
-
 a { color: inherit; }
 
 a.ribbon {
@@ -187,7 +175,7 @@ section {
     width: 10%;
     height: 10px;
     background-color: white;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     display: none;
 }
@@ -200,19 +188,31 @@ section {
     bottom: 10px;
 }
 
-#email,
-#twitter,
-#facebook,
-#instagram,
-#linkedin,
-#github {
-    padding: 0 0 10px 30px;
+.contact {
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0 1.6em;
+    background-size: 1.2em 1.2em;
+    background-position: top left;
+    background-repeat: no-repeat;
 }
 
-#email { background: url(images/email.png) top left no-repeat; }
-#twitter { background: url(images/twitter.png) top left no-repeat; }
-#facebook { background: url(images/facebook.png) top left no-repeat; }
-#instagram { background: url(images/instagram.png) top left no-repeat; }
-#linkedin { background: url(images/linkedin.png) top left no-repeat; }
-#github { background: url(images/github.png) top left no-repeat; }
+#email { background-image: url(images/email.png); }
+#twitter { background-image: url(images/twitter.png); }
+#facebook { background-image: url(images/facebook.png); }
+#instagram { background-image: url(images/instagram.png); }
+#linkedin { background-image: url(images/linkedin.png); }
+#github { background-image: url(images/github.png); }
+
+@media (min-width: 600px) and (min-height: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    body {
+        font-size: 18px;
+    }
+}
+
 

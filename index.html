@@ -36,25 +36,35 @@
             <h2>Connect</h2>
             <div class="background"></div>
             <p>
-                <div id="email">Email: <a href="mailto:me@jonathanhogg.com">me@jonathanhogg.com</a></div>
-                <div id="twitter">Twitter: <a href="https://twitter.com/jonathan_hogg" target="_blank">@jonathan_hogg</a></div>
-                <div id="facebook">Facebook: <a href="https://www.facebook.com/jonathan.hogg" target="_blank">@jonathan.hogg</a></div>
-                <div id="instagram">Instagram: <a href="https://www.instagram.com/jonathanhogg" target="_blank">@jonathanhogg</a></div>
-                <div id="linkedin">LinkedIn: <a href="https://www.linkedin.com/in/jonathanhogg" target="_blank">jonathanhogg</a></div>
-                <div id="github">Github: <a href="https://github.com/jonathanhogg" target="_blank">@jonathanhogg</a></div>
+                <div id="email" class="contact">Email: <a href="mailto:me@jonathanhogg.com">me@jonathanhogg.com</a></div>
+                <div id="twitter" class="contact">Twitter: <a href="https://twitter.com/jonathan_hogg" target="_blank">@jonathan_hogg</a></div>
+                <div id="facebook" class="contact">Facebook: <a href="https://www.facebook.com/jonathan.hogg" target="_blank">@jonathan.hogg</a></div>
+                <div id="instagram" class="contact">Instagram: <a href="https://www.instagram.com/jonathanhogg" target="_blank">@jonathanhogg</a></div>
+                <div id="linkedin" class="contact">LinkedIn: <a href="https://www.linkedin.com/in/jonathanhogg" target="_blank">jonathanhogg</a></div>
+                <div id="github" class="contact">Github: <a href="https://github.com/jonathanhogg" target="_blank">@jonathanhogg</a></div>
             </p>
         </section>
         <section id="i-feel">
             <div id="i-feel-container"></div>
             <div id="i-feel-info" class="fade-until-hover">
                 I feel <span id="i-feel-mood">...</span> (2017 redux)<br>
-                <div id="i-feel-credit">An interactive digital artwork originally commissioned by
+                <div id="i-feel-credit">An interactive digital artwork, originally commissioned by
                 <a href="http://theresiliencespace.com/" target="_blank">The&nbsp;Resilience&nbsp;Space</a></div>
             </div>
-            <a class="fade-until-hover ribbon" target="_blank" href="https://github.com/jonathanhogg/i-feel/">Find me on GitHub</a>
+            <a class="fade-until-hover ribbon" target="_blank" href="https://github.com/jonathanhogg/i-feel/">Find this on GitHub</a>
             <script type="module">
                 import {FireworksDisplay} from 'https://rawgit.com/jonathanhogg/i-feel/master/fireworks.js'
-                const display = new FireworksDisplay('i-feel-container', 'i-feel-mood');
+                class MyFireworksDisplay extends FireworksDisplay {
+                    loop(dropped_last_frame=false)
+                    {
+                        var rect = this.container.getBoundingClientRect();
+                        if (rect.top > window.innerHeight)
+                            setTimeout(() => this.loop(), 100);
+                        else
+                            super.loop(dropped_last_frame);
+                    }
+                }
+                const display = new MyFireworksDisplay('i-feel-container', 'i-feel-mood');
             </script>
         </section>
         <div id="scroll-up"></div>
