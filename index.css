@@ -186,6 +186,7 @@ section {
 
 #scroll-down {
     bottom: 10px;
+    display: block;
 }
 
 .contact {
