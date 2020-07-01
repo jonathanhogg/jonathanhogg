@@ -2,4 +2,3 @@
 
 rsync --archive --verbose --delete-excluded --exclude=.git --exclude-from=.gitignore --exclude=resync \
         ./ ${1:-www.jonathanhogg.com:/var/www/www.jonathanhogg.com/htdocs/}
-

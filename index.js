@@ -70,4 +70,3 @@ ScrollUp.onclick = () => scrollPage(-1);
 ScrollDown.onclick = () => scrollPage(+1);
 
 update();
-
