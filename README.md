@@ -1,6 +1,3 @@
-# Jonathan Hogg
-
-**Artist and technologist**
 
 ## About
 
