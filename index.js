@@ -63,6 +63,8 @@ function update()
     ScrollDown.style.display = scrollTop < document.body.scrollHeight-pageHeight*1.5 ? 'block' : 'none';
 }
 
+document.getElementById('i-feel-container').classList.add(navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ? 'firefox' : 'not-firefox');
+
 window.addEventListener('scroll', update);
 window.addEventListener('resize', update);
 
