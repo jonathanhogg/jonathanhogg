@@ -113,16 +113,13 @@ section {
     background-image: url(images/profile-background.jpg);
 }
 
-#i-feel {
-    background-color: #111;
-}
-
 #i-feel-container {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
+    background-color: #111;
 }
 
 #i-feel-info {
