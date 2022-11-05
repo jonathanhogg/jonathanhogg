@@ -223,6 +223,7 @@ section {
 #instagram { background-image: url(images/instagram.png); }
 #linkedin { background-image: url(images/linkedin.png); }
 #github { background-image: url(images/github.png); }
+#mastodon { background-image: url(images/mastodon.png); }
 
 @media (min-width: 600px) and (min-height: 600px) {
     body {
